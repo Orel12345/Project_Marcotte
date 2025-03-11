@@ -1,0 +1,36 @@
+@mixin heading-font($clr){
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 3rem;
+    color: $clr;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-bg: lightgrey;
+    --color-fg: black;
+    --color-heading1: blue;
+
+    --radius: 0.5rem;
+}
+
+header{
+    background-color: var(--color-bg);
+}
+
+h2{
+    @include heading-font(var(--color-heading1));
+    text-align: center;
+}
+
+video{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+}
