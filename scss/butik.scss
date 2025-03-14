@@ -1,0 +1,110 @@
+@mixin heading-font($clr){
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 3rem;
+    color: $clr;
+}
+
+
+:root{
+    --color-bg: lightgrey;
+    --color-fg: black;
+    --color-heading1: blue;
+
+    --radius: 0.5rem;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+
+
+header{
+    background-color: var(--color-bg);
+}
+
+header > h2{
+    @include heading-font(var(--color-heading1));
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+.button{
+    padding: 0.3rem;
+    outline: auto;
+    outline-color: black;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: black;
+}
+
+
+
+main{
+    flex-grow: 1;
+    
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+article{
+    padding: 0.3rem;
+    outline: auto;
+    outline-color: black;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: black;
+}
+
+article:hover{
+    background-color: var(--color-bg);
+}
+
+
+footer{
+    background-color: var(--color-bg);
+}
+
+@media screen and (min-width: 768px){
+    header > h2{
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(2, 13rem);
+    }
+}
+
+@media screen and (min-width: 1200px){
+    section{
+        display: grid;
+        grid-template-columns: repeat(3, 13rem);
+    }
+    
+}
