@@ -33,9 +33,13 @@ header > h2{
 header nav ul{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     list-style: none;
     text-decoration: none;
+}
+
+header .button{
+    padding: 0.5rem;
 }
 
 header .button:hover{
